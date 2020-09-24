@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alivio Landing Page UI</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container menu">
+        
+        <a href="#" class="logo">
+          Alivio
+        </a>
+        
+        <nav>
+          <a href="#">Why Alivio</a>
+          <a href="#">Solutions</a>
+          <a href="#">Community</a>
+        </nav>
+
+        <div class="login-sign">
+          <button class="btn btn-nobg">Sign in</button>
+          <button class="btn btn-green">Start Trial</button>
+        </div>
+          
+         
+      <button class="btn hamburger" onclick="openMenu()"> <i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <section class="splash">
+      <img src="images/BG2.jpg" alt="" srcset="" />
+      <div class="container">
+        <div class="splash-inner">
+          <h1>Be aware, Manage well.</h1>
+          <button class="btn btn-green">Find Your Way</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="how-it-works">
+        <div class="container">
+         <div class="title-area">
+             <h1>Understand & Release 
+                the stress in 3 steps</h1>
+                <p>Alivio offers as many journals it takes, tackling different areas such as anxiety, overwhelmedness, sadness, or anger, and a variety of personal causes, to help you become aware of your emotions, and guide you in how to manage stress.</p>
+         </div>
+         <class class="card-row">
+            <div class="card">
+                <span class="numbers">
+                    <span class="num">01</span>
+                    <h2 class="title">Personalize</h2>
+                </span>
+                <p>Answer a quick survey about how you express yourself, what causes you stress, and what area would you like to work on. This way, we can fully personalize your journal!</p>
+                <div class="image">
+                    <img src="images/Rectangle1.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="numbers">
+                    <span class="num">02</span>
+                    <h2 class="title">Write & Understand</h2>
+                </span>
+                <p>Write, draw, reflect, understand. Alivio will guide you through the prompts and will help you manage your stress!</p>
+                <div class="image">
+                    <img src="images/Rectangle2.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="numbers">
+                    <span class="num">03</span>
+                    <h2 class="title">Alivio!</h2>
+                </span>
+                <p>Now you are aware, and have a way to manage and overcome your own stress.
+                    What are you waiting for? Alivio today!</p>
+                <div class="image">
+                    <img src="images/Rectangle3.png" alt="">
+                </div>
+            </div>
+
+            
+        </div>
+        </div>
+      </section>
+
+      <section class="video-area">
+         <div class="container">
+             <div class="content">
+                <h1>Let's hear about Kayla's success story</h1>
+                <p>See how well Alivio works in a real customer’s life. </p>
+                <button class="btn btn-green">Let's get started</button>
+             </div>
+             <div class="video-container">
+              <iframe src="//www.youtube.com/embed/HSsqzzuGTPo" 
+              frameborder="0" allowfullscreen class="video"></iframe>
+             </div>
+         </div>
+    </section>
+
+    <section class="our-product">
+     <div class="container">
+        <div class="image">
+            <img src="images/smile-girl-se.png" alt="" srcset="">
+        </div>
+        <div class="content">
+            <h1>You tell us your stress,
+                We make your diary</h1>
+                <p>Everyone experiences it, and in different ways.
+                    Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
+                    <button class="btn btn-green">Find Your Way</button>
+                </div>
+     </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <nav>
+            <a href="#" class="logo">
+                Alivio
+              </a>
+            <a href="#">Why Alivio</a>
+            <a href="#">Solutions</a>
+            <a href="#">Community</a>
+            <a href="#">Pricing</a>
+
+          </nav>
+      </div>
+    </footer>
+
+    <script>
+      const openMenu = () =>{
+        const slogan = document.querySelector('.splash-inner')
+        const menu = document.querySelector('.menu')
+
+       if(menu.style.height == "50px")
+          menu.style.height = "300px";
+        else
+          menu.style.height = "50px"
+
+          if(slogan.style.display == "block")
+          slogan.style.display = "none";
+        else
+          slogan.style.display = "block"
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@mixin mq($width) {
+    @if ($width == "sm") {
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+        @content;
+      }
+    } @else if($width == "md") {
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if($width == "lg") {
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if($width == "xl") {
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  }

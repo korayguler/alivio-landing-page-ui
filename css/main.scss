@@ -1,0 +1,388 @@
+//imports
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import "mixin";
+//Variables
+$color-text: #292929;
+$color-green: #01996d;
+$color-bg-green: #245852;
+$color-brown: #484848;
+$color-text-sec: #424242;
+$white: #fff;
+$font-size: 18px;
+$container-width: 1100px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: $font-size;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+.container {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  @include mq("md") {
+    padding-left: 10px;
+    padding-right: 10pxs;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  background: none;
+  font-weight: 400;
+  color: $color-text-sec;
+  border-radius: 3px;
+  transition: 250ms color;
+}
+.btn-nobg {
+  &:hover {
+    color: $color-green;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+.btn-green {
+  font-weight: lighter;
+  color: $white;
+  background: $color-green;
+  border-radius: 3px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transition: 250ms background;
+
+  &:hover {
+    background: $color-brown;
+  }
+}
+header {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50px;
+    overflow: hidden;
+    @include mq("md") {
+      flex-direction: row;
+      height: 85px;
+    }
+  }
+  .logo {
+    color: $color-green;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-top: 10px;
+
+    @include mq("md") {
+      margin-top: inherit;
+    }
+
+    @include mq("lg") {
+      margin-top: inherit;
+    }
+
+    @include mq("xl") {
+      margin-top: inherit;
+    }
+  }
+
+  nav {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    @include mq("md") {
+      flex-direction: row;
+    }
+    a {
+      padding: 15px;
+      transition: 250ms color;
+      &:hover {
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+        color: $color-green;
+      }
+      @include mq("sm") {
+        padding-right: 5px;
+      }
+      @include mq("md") {
+        padding-right: 30px;
+      }
+    }
+  }
+
+}
+.hamburger{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 1.4rem;
+    @include mq("md"){
+    display: none;
+
+    }
+}
+.splash {
+  img {
+    width: 140%;
+    position: relative;
+    z-index: -3;
+
+    @include mq("md") {
+      width: 100%;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding-top: 50px;
+
+    .splash-inner {
+      position: absolute;
+      display: block;
+      top: 20%;
+      left: 10%;
+      @include mq("md") {
+        top: 30%;
+        position: absolute;
+      }
+
+      h1 {
+        color: $color-green;
+        font-size: 2.3rem;
+        position: relative;
+        word-wrap: break-word;
+        width: 300px;
+
+        @include mq("md") {
+          position: relative;
+          width: 390px;
+        }
+      }
+      button {
+        margin-top: 50px;
+        position: relative;
+        margin-bottom: 50px;
+        @include mq("md") {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.how-it-works {
+  .title-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 79px;
+    align-items: center;
+    @include mq("md") {
+      margin-bottom: 0;
+      margin-bottom: 79px;
+      flex-direction: row;
+    }
+
+    h1 {
+      color: $color-green;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+
+      @include mq("md") {
+        width: 30%;
+      }
+    }
+    p {
+      word-wrap: break-word;
+      color: $color-text-sec;
+      margin-top: 30px;
+      @include mq("md") {
+        width: 60%;
+      }
+    }
+  }
+}
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @include mq("md") {
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 0;
+
+    @include mq("md") {
+      margin-top: 200px;
+
+      grid-gap: 80px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .card {
+    .numbers {
+      position: relative;
+
+      .num {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 5rem;
+        color: rgba($color-green, 0.3);
+      }
+    }
+
+    .title {
+      position: relative;
+      top: -40px;
+      left: 50px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: $color-text-sec;
+
+    @include mq("md") {
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+  }
+  .image {
+    margin-top: 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.video-area {
+  height: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  width: auto;
+  background: $color-bg-green;
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+
+    @include mq("md") {
+      padding-bottom: 40%;
+    }
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq("md") {
+      flex-direction: row;
+    }
+  }
+  .content {
+    h1,
+    p,
+    button {
+      margin-bottom: 30px;
+      color: $white;
+    }
+    h1 {
+      color: $white;
+      font-size: 2rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+    }
+  }
+}
+.our-product {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+    @include mq("md") {
+      display: flex;
+      flex-direction: row;
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+  }
+  .image {
+    img {
+      width: 70%;
+    }
+  }
+  .content {
+    h1,
+    p,
+    button {
+      margin-bottom: 30px;
+    }
+    p {
+      color: $color-text-sec;
+    }
+    h1 {
+      color: $color-green;
+      font-size: 1.7rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+      word-break: break-all;
+      margin-top: 20px;
+
+      @include mq("md") {
+        font-size: 2rem;
+        word-break: break-all;
+        width: inherit;
+        margin-top: 0;
+      }
+    }
+  }
+}
+footer {
+  background: $color-bg-green;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    a {
+      padding-bottom: 40px;
+      color: $white;
+    }
+    .logo {
+      color: $white;
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+  }
+}

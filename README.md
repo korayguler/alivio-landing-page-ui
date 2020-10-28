@@ -1,7 +1,5 @@
 #### Alivio Landing Page UI
 
-<hr>
-
 #### Tech Stack
 
 ```
